@@ -28,12 +28,11 @@ PKG_PROG_PKG_CONFIG
 # Check for function availability
 # AC_CHECK_FUNCS([memset])
 
-# all libraries listed are associated with "MOBLIN_PANEL_DATE_TIME" tag
-PKG_CHECK_MODULES(MOBLIN_PANEL_DATE_TIME, glib-2.0
+PKG_CHECK_MODULES(DATETIME, glib-2.0
 			clutter-1.0)
 
-AC_SUBST(MOBLIN_PANEL_DATE_TIME_CFLAGS)
-AC_SUBST(MOBLIN_PANEL_DATE_TIME_LIBS)
+AC_SUBST(DATETIME_CFLAGS)
+AC_SUBST(DATETIME_LIBS)
 
 
 
@@ -41,7 +40,7 @@ AC_SUBST(MOBLIN_PANEL_DATE_TIME_LIBS)
 ALL_LINGUAS="en_US"
 AC_SUBST(ALL_LINGUAS)
 AM_GLIB_GNU_GETTEXT
-AC_DEFINE(GETTEXT_PACKAGE, ["moblin_panel_date_time"], [Package name for gettext])
+AC_DEFINE(GETTEXT_PACKAGE, ["moblin-panel-date-time"], [Package name for gettext])
 
 
 desktopentrydir=${datadir}/applications
@@ -53,7 +52,7 @@ AC_SUBST(icondir)
 # Output files
 AC_OUTPUT([Makefile
 src/Makefile
-src/moblin_panel_date_time.desktop
+data/moblin-panel-date-time.desktop
 ])
 
 echo ""

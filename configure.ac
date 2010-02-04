@@ -12,21 +12,31 @@ m4_define([moblin_panel_date_time_version],
 m4_define([moblin_panel_date_time_api_version],
           [moblin_panel_date_time_version_major.moblin_panel_date_time_version_minor])
 
-AC_INIT(moblin_panel_date_time, moblin_panel_date_time_version)
-AM_INIT_AUTOMAKE(moblin_panel_date_time, moblin_panel_date_time_version)
+AC_INIT(moblin-panel-date-time, moblin_panel_date_time_version)
+AM_INIT_AUTOMAKE(moblin-panel-date-time, moblin_panel_date_time_version)
 AC_CONFIG_HEADERS(config.h)
-#AC_CONFIG_SRCDIR(libmoblin_panel_date_time/moblin_panel_date_time.cpp)
+AC_CONFIG_MACRO_DIR([m4])
+
+AC_CANONICAL_HOST
+IT_PROG_INTLTOOL([0.35.0])
 
 # Check for programs
+AC_PROG_CC_STDC
 AC_PROG_LIBTOOL
 AC_PROG_CC
 AC_PROG_INSTALL
+AC_ISC_POSIX
+AC_HEADER_STDC
+AM_PROG_CC_C_O
+
+CFLAGS="$CFLAGS -Wall"
+
+PKG_CHECK_MODULES(MPL, moblin-panel >= 0.50.0)
+MOBLIN_PANELS_DIR=`$PKG_CONFIG --variable=moblin_panel_panels_dir moblin-panel`
+AC_SUBST(MOBLIN_PANELS_DIR)
 
 # enable pkg-config
 PKG_PROG_PKG_CONFIG
-
-# Check for function availability
-# AC_CHECK_FUNCS([memset])
 
 PKG_CHECK_MODULES(DATETIME, glib-2.0
 			clutter-1.0)
@@ -34,13 +44,26 @@ PKG_CHECK_MODULES(DATETIME, glib-2.0
 AC_SUBST(DATETIME_CFLAGS)
 AC_SUBST(DATETIME_LIBS)
 
+AC_ARG_ENABLE([moblin-desktop-file],
+              [AC_HELP_STRING([--disable-moblin-desktop-file],
+                              [Disable installation of moblin desktop file])],
+              [enable_mdesktop=$enableval],
+              [enable_mdesktop=yes])
+
+AM_CONDITIONAL([ENABLE_MOBLIN_DESKTOP_FILE], [test "x$enable_mdesktop" = "xyes"])
 
 
 # i18n
-ALL_LINGUAS="en_US"
 AC_SUBST(ALL_LINGUAS)
 AM_GLIB_GNU_GETTEXT
 AC_DEFINE(GETTEXT_PACKAGE, ["moblin-panel-date-time"], [Package name for gettext])
+
+GETTEXT_PACKAGE=moblin-panel-date-time
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],
+                   ["$GETTEXT_PACKAGE"],
+                   [Gettext domain name])
+AM_GLIB_GNU_GETTEXT
 
 
 desktopentrydir=${datadir}/applications
@@ -52,7 +75,7 @@ AC_SUBST(icondir)
 # Output files
 AC_OUTPUT([Makefile
 src/Makefile
-data/moblin-panel-date-time.desktop
+po/Makefile.in
 ])
 
 echo ""

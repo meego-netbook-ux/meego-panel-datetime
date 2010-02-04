@@ -52,6 +52,20 @@ AC_ARG_ENABLE([moblin-desktop-file],
 
 AM_CONDITIONAL([ENABLE_MOBLIN_DESKTOP_FILE], [test "x$enable_mdesktop" = "xyes"])
 
+AC_ARG_ENABLE([cache],
+              [AC_HELP_STRING([--enable-cache],
+                              [Enable Nbtk image cache generation])],
+              [],
+              [enable_cache=no])
+
+AS_IF([test "x$enable_cache" = "xyes"],
+      [
+      AC_CHECK_PROG([NBTK_CREATE_IMAGE_CACHE],
+                [nbtk-create-image-cache],
+                [$(which nbtk-create-image-cache)])
+])
+
+AM_CONDITIONAL([ENABLE_CACHE],   [test "x$enable_cache" = "xyes"])
 
 # i18n
 AC_SUBST(ALL_LINGUAS)
@@ -76,6 +90,7 @@ AC_SUBST(icondir)
 AC_OUTPUT([Makefile
 src/Makefile
 data/Makefile
+data/theme/Makefile
 po/Makefile.in
 ])
 

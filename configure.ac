@@ -75,6 +75,7 @@ AC_SUBST(icondir)
 # Output files
 AC_OUTPUT([Makefile
 src/Makefile
+data/Makefile
 po/Makefile.in
 ])
 

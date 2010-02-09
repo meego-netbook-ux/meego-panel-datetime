@@ -12,8 +12,8 @@ m4_define([moblin_panel_date_time_version],
 m4_define([moblin_panel_date_time_api_version],
           [moblin_panel_date_time_version_major.moblin_panel_date_time_version_minor])
 
-AC_INIT(moblin-panel-date-time, moblin_panel_date_time_version)
-AM_INIT_AUTOMAKE(moblin-panel-date-time, moblin_panel_date_time_version)
+AC_INIT(moblin-panel-datetime, moblin_panel_date_time_version)
+AM_INIT_AUTOMAKE(moblin-panel-datetime, moblin_panel_date_time_version)
 AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -73,9 +73,9 @@ AM_CONDITIONAL([ENABLE_CACHE],   [test "x$enable_cache" = "xyes"])
 # i18n
 AC_SUBST(ALL_LINGUAS)
 AM_GLIB_GNU_GETTEXT
-AC_DEFINE(GETTEXT_PACKAGE, ["moblin-panel-date-time"], [Package name for gettext])
+AC_DEFINE(GETTEXT_PACKAGE, ["moblin-panel-datetime"], [Package name for gettext])
 
-GETTEXT_PACKAGE=moblin-panel-date-time
+GETTEXT_PACKAGE=moblin-panel-datetime
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],
                    ["$GETTEXT_PACKAGE"],
@@ -98,7 +98,7 @@ po/Makefile.in
 ])
 
 echo ""
-echo "   moblin-panel-date-time $VERSION"
+echo "   moblin-panel-datetime $VERSION"
 echo "   ====================="
 echo "   Documentation: ${enable_gtk_doc}"
 echo ""

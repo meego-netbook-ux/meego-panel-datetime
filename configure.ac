@@ -42,6 +42,7 @@ PKG_CHECK_MODULES(DATETIME, glib-2.0
 			clutter-1.0
 			mx-1.0
 			gweather
+			gconf-2.0
 			libxml-2.0)
 
 AC_SUBST(DATETIME_CFLAGS)
@@ -88,6 +89,12 @@ AC_SUBST(desktopentrydir)
 
 icondir=${datadir}/icons/hicolor/32x32/apps
 AC_SUBST(icondir)
+
+dnl ***********
+dnl GConf stuff
+dnl ***********
+AC_PATH_PROG(GCONFTOOL, gconftool-2, no)
+AM_GCONF_SOURCE_2
 
 # Output files
 AC_OUTPUT([Makefile

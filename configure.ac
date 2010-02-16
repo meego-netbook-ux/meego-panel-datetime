@@ -44,6 +44,7 @@ PKG_CHECK_MODULES(DATETIME, glib-2.0
 			gweather
 			gconf-2.0
 			libnotify
+			libcanberra
 			libxml-2.0)
 
 AC_SUBST(DATETIME_CFLAGS)

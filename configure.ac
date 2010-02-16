@@ -43,6 +43,7 @@ PKG_CHECK_MODULES(DATETIME, glib-2.0
 			mx-1.0
 			gweather
 			gconf-2.0
+			libnotify
 			libxml-2.0)
 
 AC_SUBST(DATETIME_CFLAGS)

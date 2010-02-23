@@ -45,6 +45,8 @@ PKG_CHECK_MODULES(DATETIME, glib-2.0
 			gconf-2.0
 			libnotify
 			libcanberra
+			libjana-ecal
+			penge
 			libxml-2.0)
 
 AC_SUBST(DATETIME_CFLAGS)

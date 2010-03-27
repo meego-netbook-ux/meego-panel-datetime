@@ -4,7 +4,7 @@ AC_PREREQ(2.61)
 # odd micro numbers indicate in-progress development
 # even micro numbers indicate released versions
 m4_define(moblin_panel_date_time_version_major, 0)
-m4_define(moblin_panel_date_time_version_minor, 1)
+m4_define(moblin_panel_date_time_version_minor, 2)
 m4_define(moblin_panel_date_time_version_micro, 0)
 
 m4_define([moblin_panel_date_time_version],

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: moblin-panel-datetime\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-05-12 09:44+0000\n"
-"PO-Revision-Date: 2010-05-13 13:01+0100\n"
+"POT-Creation-Date: 2010-06-09 09:19+0000\n"
+"PO-Revision-Date: 2010-06-10 14:08+0100\n"
 "Last-Translator: astur <malditoastur@gmail.com>\n"
 "Language-Team: asturian <alministradores@softastur.org>\n"
 "MIME-Version: 1.0\n"
@@ -65,23 +65,23 @@ msgstr "%b %-d (llocal)"
 msgid "%b %-d"
 msgstr "%b %-d"
 
-#: ../src/mnp-world-clock.c:523
+#: ../src/mnp-world-clock.c:525
 msgid "Time"
 msgstr "Hora"
 
-#: ../src/mnp-world-clock.c:577
+#: ../src/mnp-world-clock.c:579
 msgid "24 hour clock"
 msgstr "Formatu de 24 hores"
 
-#: ../src/mnp-world-clock.c:646
+#: ../src/mnp-world-clock.c:648
 msgid "Enter a country or city"
 msgstr "Introduz un país o una ciudá"
 
-#: ../src/mnp-world-clock.c:669
+#: ../src/mnp-world-clock.c:671
 msgid "Add"
 msgstr "Amestar"
 
-#: ../src/mnp-world-clock.c:743
+#: ../src/mnp-world-clock.c:745
 msgid "Set Time & Date"
 msgstr "Axustar data y hora"
 
@@ -116,6 +116,10 @@ msgstr "Xeres"
 #: ../src/mnp-datetime.c:608
 msgid "Open Tasks"
 msgstr "Abrir xeres"
+
+#: ../src/mnp-shell.c:164
+msgid "Time and Date"
+msgstr "Data y hora"
 
 #: ../src/date-time.schemas.in.h:1
 msgid "24 hour clock or 12 hour clock"

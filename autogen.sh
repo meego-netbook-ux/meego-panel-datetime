@@ -4,13 +4,13 @@
 srcdir=`dirname $0`
 test -z "$srcdir" && srcdir=.
 
-PKG_NAME="moblin-panel-datetime"
+PKG_NAME="meego-panel-datetime"
 REQUIRED_AUTOMAKE_VERSION=1.10
 
 (test -f $srcdir/configure.ac \
   && test -d $srcdir/src) || {
     echo -n "**Error**: Directory "\`$srcdir\'" does not look like the"
-    echo " top-level moblin-panel-datetime directory"
+    echo " top-level meego-panel-datetime directory"
     exit 1
 }
 

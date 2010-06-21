@@ -3,17 +3,17 @@ AC_PREREQ(2.61)
 # package version number (not shared library version)
 # odd micro numbers indicate in-progress development
 # even micro numbers indicate released versions
-m4_define(moblin_panel_date_time_version_major, 0)
-m4_define(moblin_panel_date_time_version_minor, 2)
-m4_define(moblin_panel_date_time_version_micro, 6)
+m4_define(meego_panel_date_time_version_major, 0)
+m4_define(meego_panel_date_time_version_minor, 2)
+m4_define(meego_panel_date_time_version_micro, 6)
 
-m4_define([moblin_panel_date_time_version],
-          [moblin_panel_date_time_version_major.moblin_panel_date_time_version_minor.moblin_panel_date_time_version_micro])
-m4_define([moblin_panel_date_time_api_version],
-          [moblin_panel_date_time_version_major.moblin_panel_date_time_version_minor])
+m4_define([meego_panel_date_time_version],
+          [meego_panel_date_time_version_major.meego_panel_date_time_version_minor.meego_panel_date_time_version_micro])
+m4_define([meego_panel_date_time_api_version],
+          [meego_panel_date_time_version_major.meego_panel_date_time_version_minor])
 
-AC_INIT(moblin-panel-datetime, moblin_panel_date_time_version)
-AM_INIT_AUTOMAKE(moblin-panel-datetime, moblin_panel_date_time_version)
+AC_INIT(meego-panel-datetime, meego_panel_date_time_version)
+AM_INIT_AUTOMAKE(meego-panel-datetime, meego_panel_date_time_version)
 AC_CONFIG_HEADERS(config.h)
 AC_CONFIG_MACRO_DIR([m4])
 
@@ -32,9 +32,9 @@ AM_PROG_CC_C_O
 
 CFLAGS="$CFLAGS -Wall"
 
-PKG_CHECK_MODULES(MPL, moblin-panel >= 0.50.0)
-MOBLIN_PANELS_DIR=`$PKG_CONFIG --variable=moblin_panel_panels_dir moblin-panel`
-AC_SUBST(MOBLIN_PANELS_DIR)
+PKG_CHECK_MODULES(MPL, meego-panel >= 0.50.0)
+MEEGO_PANELS_DIR=`$PKG_CONFIG --variable=meego_panel_panels_dir meego-panel`
+AC_SUBST(MEEGO_PANELS_DIR)
 
 # enable pkg-config
 PKG_PROG_PKG_CONFIG
@@ -53,13 +53,13 @@ PKG_CHECK_MODULES(DATETIME, glib-2.0
 AC_SUBST(DATETIME_CFLAGS)
 AC_SUBST(DATETIME_LIBS)
 
-AC_ARG_ENABLE([moblin-desktop-file],
-              [AC_HELP_STRING([--disable-moblin-desktop-file],
-                              [Disable installation of moblin desktop file])],
+AC_ARG_ENABLE([meego-desktop-file],
+              [AC_HELP_STRING([--disable-meego-desktop-file],
+                              [Disable installation of meego desktop file])],
               [enable_mdesktop=$enableval],
               [enable_mdesktop=yes])
 
-AM_CONDITIONAL([ENABLE_MOBLIN_DESKTOP_FILE], [test "x$enable_mdesktop" = "xyes"])
+AM_CONDITIONAL([ENABLE_MEEGO_DESKTOP_FILE], [test "x$enable_mdesktop" = "xyes"])
 
 AC_ARG_ENABLE([cache],
               [AC_HELP_STRING([--enable-cache],
@@ -79,9 +79,9 @@ AM_CONDITIONAL([ENABLE_CACHE],   [test "x$enable_cache" = "xyes"])
 # i18n
 AC_SUBST(ALL_LINGUAS)
 AM_GLIB_GNU_GETTEXT
-AC_DEFINE(GETTEXT_PACKAGE, ["moblin-panel-datetime"], [Package name for gettext])
+AC_DEFINE(GETTEXT_PACKAGE, ["meego-panel-datetime"], [Package name for gettext])
 
-GETTEXT_PACKAGE=moblin-panel-datetime
+GETTEXT_PACKAGE=meego-panel-datetime
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],
                    ["$GETTEXT_PACKAGE"],
@@ -110,7 +110,7 @@ po/Makefile.in
 ])
 
 echo ""
-echo "   moblin-panel-datetime $VERSION"
+echo "   meego-panel-datetime $VERSION"
 echo "   ====================="
 echo "   Documentation: ${enable_gtk_doc}"
 echo ""

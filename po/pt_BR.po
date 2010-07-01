@@ -101,10 +101,6 @@ msgstr "Compromissos"
 msgid "Today"
 msgstr "Hoje"
 
-#: ../src/mnp-datetime.c:433
-msgid "Open Appointments"
-msgstr "Compromissos abertos"
-
 #: ../src/mnp-datetime.c:511
 msgid "Tasks"
 msgstr "Tarefas"
@@ -128,6 +124,10 @@ msgstr "Lista de alarmes em formato curto codificado"
 #: ../src/mnp-datetime.c:608
 msgid "Open Tasks"
 msgstr "Abrir tarefas"
+
+#: ../src/mnp-datetime.c:433
+msgid "Open Appointments"
+msgstr "Abrir compromissos"
 
 #~ msgid "OFF"
 #~ msgstr "DESLIGADO"

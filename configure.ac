@@ -5,7 +5,7 @@ AC_PREREQ(2.61)
 # even micro numbers indicate released versions
 m4_define(meego_panel_date_time_version_major, 0)
 m4_define(meego_panel_date_time_version_minor, 3)
-m4_define(meego_panel_date_time_version_micro, 1)
+m4_define(meego_panel_date_time_version_micro, 2)
 
 m4_define([meego_panel_date_time_version],
           [meego_panel_date_time_version_major.meego_panel_date_time_version_minor.meego_panel_date_time_version_micro])

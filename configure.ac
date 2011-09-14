@@ -48,6 +48,7 @@ PKG_CHECK_MODULES(DATETIME, glib-2.0
 			libcanberra
 			libjana-ecal
 			penge
+			geoclue
 			libxml-2.0)
 
 AC_SUBST(DATETIME_CFLAGS)

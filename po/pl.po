@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Romuald Pawlikowski <r.pawlikowski@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: meego-panel-datetime\n"
-"Report-Msgid-Bugs-To: http://bugs.meego.com/\n"
-"POT-Creation-Date: 2010-11-27 00:58+0000\n"
-"PO-Revision-Date: 2011-03-02 18:47+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Polish <None>\n"
+"Report-Msgid-Bugs-To: https://bugs.meego.com/\n"
+"POT-Creation-Date: 2011-11-04 12:46+0000\n"
+"PO-Revision-Date: 2011-11-29 21:36+0000\n"
+"Last-Translator: GLS_Translator_PLK2 <r.pawlikowski@gmail.com>\n"
+"Language-Team: Polish (http://www.transifex.net/projects/p/meego/team/pl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +36,7 @@ msgstr "data i godzina"
 #. * weekday differs from the weekday at the location
 #. * (the %A expands to the weekday). The %p expands to
 #. * am/pm.
-#: ../src/mnp-utils.c:423
+#: ../src/mnp-utils.c:504
 msgid "%l:%M %p"
 msgstr "%l:%M %p"
 
@@ -44,47 +45,53 @@ msgstr "%l:%M %p"
 #. * (eg, like in France: 20:10), when the local
 #. * weekday differs from the weekday at the location
 #. * (the %A expands to the weekday).
-#: ../src/mnp-utils.c:431
+#: ../src/mnp-utils.c:512
 msgid "%H:%M"
 msgstr "%H:%M"
 
-#: ../src/mnp-utils.c:446
+#. Translators: This is a strftime format string.
+#. * It is used to display in Aug 6 (current location)
+#: ../src/mnp-utils.c:525
+msgid "%b %-d (current location)"
+msgstr "%b %-d (bieżąca lokalizacja)"
+
+#: ../src/mnp-utils.c:531
 msgid "%b %-d (Yesterday)"
 msgstr "%b %-d (wczoraj)"
 
-#: ../src/mnp-utils.c:448
+#: ../src/mnp-utils.c:533
 msgid "%b %-d (Tomorrow)"
 msgstr "%b %-d (jutro)"
 
-#: ../src/mnp-utils.c:454
+#: ../src/mnp-utils.c:538
 msgid "%b %-d (local)"
 msgstr "%b %-d (czas lokalny)"
 
-#: ../src/mnp-utils.c:456
+#: ../src/mnp-utils.c:540
 msgid "%b %-d"
 msgstr "%b %-d"
 
-#: ../src/mnp-world-clock.c:525
+#: ../src/mnp-world-clock.c:580
 msgid "Time"
 msgstr "Godzina"
 
-#: ../src/mnp-world-clock.c:579
+#: ../src/mnp-world-clock.c:633
 msgid "24 hour clock"
 msgstr "Zegar 24-godzinny"
 
-#: ../src/mnp-world-clock.c:648
+#: ../src/mnp-world-clock.c:770
 msgid "Enter a country or city"
 msgstr "Wprowadź kraj lub miasto"
 
-#: ../src/mnp-world-clock.c:671
+#: ../src/mnp-world-clock.c:793
 msgid "Add"
 msgstr "Dodaj"
 
-#: ../src/mnp-world-clock.c:745
+#: ../src/mnp-world-clock.c:882
 msgid "Set Time & Date"
 msgstr "Ustaw datę i godzinę"
 
-#: ../src/mnp-datetime.c:293
+#: ../src/mnp-datetime.c:324
 msgid "Appointments"
 msgstr "Spotkania"
 
@@ -99,19 +106,19 @@ msgstr "Spotkania"
 #. clutter_actor_set_height (div, 2);
 #. 
 #. format date
-#: ../src/mnp-datetime.c:342 ../src/mnp-datetime.c:541
+#: ../src/mnp-datetime.c:373 ../src/mnp-datetime.c:579
 msgid "Today"
 msgstr "Dzisiaj"
 
-#: ../src/mnp-datetime.c:433
+#: ../src/mnp-datetime.c:471
 msgid "Open Appointments"
 msgstr "Otwórz spotkania"
 
-#: ../src/mnp-datetime.c:511
+#: ../src/mnp-datetime.c:549
 msgid "Tasks"
 msgstr "Zadania"
 
-#: ../src/mnp-datetime.c:608
+#: ../src/mnp-datetime.c:651
 msgid "Open Tasks"
 msgstr "Otwórz zadania"
 
@@ -132,3 +139,5 @@ msgstr ""
 #: ../src/date-time.schemas.in.h:3
 msgid "List of alarms in short encoded form"
 msgstr "Lista alarmów w krótkiej, zakodowanej postaci"
+
+

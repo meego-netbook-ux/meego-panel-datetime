@@ -1,16 +1,17 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Sérgio Marques <smarquespt@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: meego-panel-datetime\n"
-"Report-Msgid-Bugs-To: http://bugs.meego.com/\n"
-"POT-Creation-Date: 2010-11-27 00:58+0000\n"
-"PO-Revision-Date: 2011-03-02 18:47+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Portuguese <None>\n"
+"Report-Msgid-Bugs-To: https://bugs.meego.com/\n"
+"POT-Creation-Date: 2011-11-04 12:46+0000\n"
+"PO-Revision-Date: 2011-11-03 19:01+0000\n"
+"Last-Translator: patrick <patrick.mccarty@linux.intel.com>\n"
+"Language-Team: Portuguese (http://www.transifex.net/projects/p/meego/team/pt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +24,7 @@ msgstr "Data/Hora"
 
 #: ../data/meego-panel-datetime.desktop.in.in.h:1
 msgid "Date and Time panel"
-msgstr "Painel de data e hora"
+msgstr "Painel de Data e Hora"
 
 #: ../data/meego-panel-datetime.desktop.in.in.h:2
 msgid "date and time"
@@ -35,7 +36,7 @@ msgstr "data e hora"
 #. * weekday differs from the weekday at the location
 #. * (the %A expands to the weekday). The %p expands to
 #. * am/pm.
-#: ../src/mnp-utils.c:423
+#: ../src/mnp-utils.c:504
 msgid "%l:%M %p"
 msgstr "%l:%M %p"
 
@@ -44,47 +45,53 @@ msgstr "%l:%M %p"
 #. * (eg, like in France: 20:10), when the local
 #. * weekday differs from the weekday at the location
 #. * (the %A expands to the weekday).
-#: ../src/mnp-utils.c:431
+#: ../src/mnp-utils.c:512
 msgid "%H:%M"
 msgstr "%H:%M"
 
-#: ../src/mnp-utils.c:446
+#. Translators: This is a strftime format string.
+#. * It is used to display in Aug 6 (current location)
+#: ../src/mnp-utils.c:525
+msgid "%b %-d (current location)"
+msgstr ""
+
+#: ../src/mnp-utils.c:531
 msgid "%b %-d (Yesterday)"
 msgstr "%b %-d (Ontem)"
 
-#: ../src/mnp-utils.c:448
+#: ../src/mnp-utils.c:533
 msgid "%b %-d (Tomorrow)"
 msgstr "%b %-d (Amanhã)"
 
-#: ../src/mnp-utils.c:454
+#: ../src/mnp-utils.c:538
 msgid "%b %-d (local)"
 msgstr "%b %-d (local)"
 
-#: ../src/mnp-utils.c:456
+#: ../src/mnp-utils.c:540
 msgid "%b %-d"
 msgstr "%b %-d"
 
-#: ../src/mnp-world-clock.c:525
+#: ../src/mnp-world-clock.c:580
 msgid "Time"
 msgstr "Hora"
 
-#: ../src/mnp-world-clock.c:579
+#: ../src/mnp-world-clock.c:633
 msgid "24 hour clock"
 msgstr "Relógio 24 horas"
 
-#: ../src/mnp-world-clock.c:648
+#: ../src/mnp-world-clock.c:770
 msgid "Enter a country or city"
 msgstr "Indique o país ou cidade"
 
-#: ../src/mnp-world-clock.c:671
+#: ../src/mnp-world-clock.c:793
 msgid "Add"
 msgstr "Adicionar"
 
-#: ../src/mnp-world-clock.c:745
+#: ../src/mnp-world-clock.c:882
 msgid "Set Time & Date"
-msgstr "Acertar data e hora"
+msgstr "Acertar Data e Hora"
 
-#: ../src/mnp-datetime.c:293
+#: ../src/mnp-datetime.c:324
 msgid "Appointments"
 msgstr "Compromissos"
 
@@ -99,25 +106,25 @@ msgstr "Compromissos"
 #. clutter_actor_set_height (div, 2);
 #. 
 #. format date
-#: ../src/mnp-datetime.c:342 ../src/mnp-datetime.c:541
+#: ../src/mnp-datetime.c:373 ../src/mnp-datetime.c:579
 msgid "Today"
 msgstr "Hoje"
 
-#: ../src/mnp-datetime.c:433
+#: ../src/mnp-datetime.c:471
 msgid "Open Appointments"
-msgstr "Compromissos por realizar"
+msgstr "Compromissos por Realizar"
 
-#: ../src/mnp-datetime.c:511
+#: ../src/mnp-datetime.c:549
 msgid "Tasks"
 msgstr "Tarefas"
 
-#: ../src/mnp-datetime.c:608
+#: ../src/mnp-datetime.c:651
 msgid "Open Tasks"
-msgstr "Tarefas por realizar"
+msgstr "Tarefas por Realizar"
 
 #: ../src/mnp-shell.c:164
 msgid "Time and Date"
-msgstr "Hora e data"
+msgstr "Hora e Data"
 
 #: ../src/date-time.schemas.in.h:1
 msgid "24 hour clock or 12 hour clock"
@@ -130,3 +137,5 @@ msgstr "Alarmes armazenados para serem utilizados pelo notificador."
 #: ../src/date-time.schemas.in.h:3
 msgid "List of alarms in short encoded form"
 msgstr "Lista de alarmes codificados"
+
+
